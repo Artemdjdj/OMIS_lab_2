@@ -32,14 +32,8 @@ class BaseWindow(QMainWindow):
         self.close()
 
     def on(self, object_name, signal_name, slot):
-        """Подключить сигнал элемента к обработчику по objectName."""
         widget = getattr(self.ui, object_name, None)
         if widget is None:
-            print(
-                f"[навигация] {type(self).__name__}: в .ui нет объекта "
-                f"«{object_name}» — переход не подключён. Проверьте "
-                f"objectName в Qt Designer."
-            )
             return
         getattr(widget, signal_name).connect(slot)
 

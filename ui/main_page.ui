@@ -20,6 +20,9 @@
    <string>3. Главная страница (лента публикаций)</string>
   </property>
   <layout class="QVBoxLayout" name="mainLayout">
+   <property name="spacing">
+    <number>10</number>
+   </property>
    <property name="leftMargin">
     <number>16</number>
    </property>
@@ -31,9 +34,6 @@
    </property>
    <property name="bottomMargin">
     <number>14</number>
-   </property>
-   <property name="spacing">
-    <number>10</number>
    </property>
    <item>
     <widget class="QFrame" name="headerFrame">
@@ -61,6 +61,7 @@
         <property name="font">
          <font>
           <pointsize>14</pointsize>
+          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -141,156 +142,154 @@
     </layout>
    </item>
    <item>
-    <widget class="QWidget" name="publicationsContainer">
-     <layout class="QVBoxLayout" name="publicationsLayout">
-      <property name="spacing">
-       <number>10</number>
-      </property>
-      <item>
-       <widget class="QFrame" name="publicationCard1">
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
+    <layout class="QVBoxLayout" name="publicationsLayout">
+     <property name="spacing">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QFrame" name="publicationCard1">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <layout class="QVBoxLayout" name="card1Layout">
+        <property name="spacing">
+         <number>6</number>
         </property>
-        <property name="frameShadow">
-         <enum>QFrame::Plain</enum>
+        <property name="leftMargin">
+         <number>10</number>
         </property>
-        <layout class="QVBoxLayout" name="card1Layout">
-         <property name="leftMargin">
-          <number>10</number>
-         </property>
-         <property name="topMargin">
-          <number>8</number>
-         </property>
-         <property name="rightMargin">
-          <number>10</number>
-         </property>
-         <property name="bottomMargin">
-          <number>8</number>
-         </property>
-         <property name="spacing">
-          <number>6</number>
-         </property>
-         <item>
-          <widget class="QLabel" name="card1HeaderLabel">
-           <property name="text">
-            <string>[ Карточка публикации ]</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="card1TitleLabel">
-           <property name="text">
-            <string>Название: ...</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="card1MetaLabel">
-           <property name="text">
-            <string>Автор: ... | Категория: ...</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="card1TextLabel">
-           <property name="text">
-            <string>Краткий текст: ...</string>
-           </property>
-           <property name="wordWrap">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="card1StatsLabel">
-           <property name="text">
-            <string>★ Рейтинг: ... | 💬 Комментарии: ...</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <widget class="QFrame" name="publicationCard2">
-        <property name="frameShape">
-         <enum>QFrame::Box</enum>
+        <property name="topMargin">
+         <number>8</number>
         </property>
-        <property name="frameShadow">
-         <enum>QFrame::Plain</enum>
+        <property name="rightMargin">
+         <number>10</number>
         </property>
-        <layout class="QVBoxLayout" name="card2Layout">
-         <property name="leftMargin">
-          <number>10</number>
-         </property>
-         <property name="topMargin">
-          <number>8</number>
-         </property>
-         <property name="rightMargin">
-          <number>10</number>
-         </property>
-         <property name="bottomMargin">
-          <number>8</number>
-         </property>
-         <property name="spacing">
-          <number>6</number>
-         </property>
-         <item>
-          <widget class="QLabel" name="card2HeaderLabel">
-           <property name="text">
-            <string>[ Карточка публикации ]</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="card2TitleLabel">
-           <property name="text">
-            <string>Название: ...</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="card2MetaLabel">
-           <property name="text">
-            <string>Автор: ... | Категория: ...</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="card2TextLabel">
-           <property name="text">
-            <string>Краткий текст: ...</string>
-           </property>
-           <property name="wordWrap">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="card2StatsLabel">
-           <property name="text">
-            <string>★ Рейтинг: ... | 💬 Комментарии: ...</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <spacer name="cardsBottomSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
+        <property name="bottomMargin">
+         <number>8</number>
         </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
+        <item>
+         <widget class="QLabel" name="card1HeaderLabel">
+          <property name="text">
+           <string>[ Карточка публикации ]</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="card1TitleLabel">
+          <property name="text">
+           <string>Название: ...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="card1MetaLabel">
+          <property name="text">
+           <string>Автор: ... | Категория: ...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="card1TextLabel">
+          <property name="text">
+           <string>Краткий текст: ...</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="card1StatsLabel">
+          <property name="text">
+           <string>★ Рейтинг: ... | 💬 Комментарии: ...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="publicationCard2">
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <layout class="QVBoxLayout" name="card2Layout">
+        <property name="spacing">
+         <number>6</number>
         </property>
-       </spacer>
-      </item>
-     </layout>
-    </widget>
+        <property name="leftMargin">
+         <number>10</number>
+        </property>
+        <property name="topMargin">
+         <number>8</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>8</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="card2HeaderLabel">
+          <property name="text">
+           <string>[ Карточка публикации ]</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="card2TitleLabel">
+          <property name="text">
+           <string>Название: ...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="card2MetaLabel">
+          <property name="text">
+           <string>Автор: ... | Категория: ...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="card2TextLabel">
+          <property name="text">
+           <string>Краткий текст: ...</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="card2StatsLabel">
+          <property name="text">
+           <string>★ Рейтинг: ... | 💬 Комментарии: ...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <spacer name="cardsBottomSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </item>
    <item>
     <layout class="QHBoxLayout" name="paginationLayout">
