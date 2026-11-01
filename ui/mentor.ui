@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MentoringScreen</class>
+ <widget class="QWidget" name="MentoringScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>820</width>
+    <height>560</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>820</width>
+    <height>560</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>8. Экран наставничества (перспективный)</string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="leftMargin">
+    <number>20</number>
+   </property>
+   <property name="topMargin">
+    <number>16</number>
+   </property>
+   <property name="rightMargin">
+    <number>20</number>
+   </property>
+   <property name="bottomMargin">
+    <number>16</number>
+   </property>
+   <property name="spacing">
+    <number>12</number>
+   </property>
+   <item>
+    <widget class="QFrame" name="titleFrame">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QVBoxLayout" name="titleLayout">
+      <property name="leftMargin">
+       <number>8</number>
+      </property>
+      <property name="topMargin">
+       <number>8</number>
+      </property>
+      <property name="rightMargin">
+       <number>8</number>
+      </property>
+      <property name="bottomMargin">
+       <number>8</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="titleLabel">
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Наставники</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="filterFrame">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QHBoxLayout" name="filterLayout">
+      <property name="leftMargin">
+       <number>8</number>
+      </property>
+      <property name="topMargin">
+       <number>6</number>
+      </property>
+      <property name="rightMargin">
+       <number>8</number>
+      </property>
+      <property name="bottomMargin">
+       <number>6</number>
+      </property>
+      <property name="spacing">
+       <number>8</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="themeLabel">
+        <property name="text">
+         <string>Тема:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="themeCombo">
+        <property name="minimumSize">
+         <size>
+          <width>180</width>
+          <height>0</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="filterSeparator">
+        <property name="text">
+         <string>|</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="searchButton">
+        <property name="text">
+         <string>поиск</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="filterSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="mentorRow1">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QHBoxLayout" name="mentor1Layout">
+      <property name="leftMargin">
+       <number>8</number>
+      </property>
+      <property name="topMargin">
+       <number>6</number>
+      </property>
+      <property name="rightMargin">
+       <number>8</number>
+      </property>
+      <property name="bottomMargin">
+       <number>6</number>
+      </property>
+      <property name="spacing">
+       <number>8</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="mentor1TagLabel">
+        <property name="text">
+         <string>[ Наставник: ]</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor1NameLabel">
+        <property name="text">
+         <string>Имя</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor1Separator1">
+        <property name="text">
+         <string>|</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor1ThemeLabel">
+        <property name="text">
+         <string>Тема</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor1Separator2">
+        <property name="text">
+         <string>|</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor1ExperienceLabel">
+        <property name="text">
+         <string>Опыт</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor1Separator3">
+        <property name="text">
+         <string>|</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="mentor1Spacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="mentor1RequestButton">
+        <property name="text">
+         <string>Отправить заявку</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="mentorRow2">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QHBoxLayout" name="mentor2Layout">
+      <property name="leftMargin">
+       <number>8</number>
+      </property>
+      <property name="topMargin">
+       <number>6</number>
+      </property>
+      <property name="rightMargin">
+       <number>8</number>
+      </property>
+      <property name="bottomMargin">
+       <number>6</number>
+      </property>
+      <property name="spacing">
+       <number>8</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="mentor2TagLabel">
+        <property name="text">
+         <string>[ Наставник: ]</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor2NameLabel">
+        <property name="text">
+         <string>Имя</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor2Separator1">
+        <property name="text">
+         <string>|</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor2ThemeLabel">
+        <property name="text">
+         <string>Тема</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor2Separator2">
+        <property name="text">
+         <string>|</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor2ExperienceLabel">
+        <property name="text">
+         <string>Опыт</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor2Separator3">
+        <property name="text">
+         <string>|</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="mentor2Spacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="mentor2RequestButton">
+        <property name="text">
+         <string>Отправить заявку</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="mentorRow3">
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <layout class="QHBoxLayout" name="mentor3Layout">
+      <property name="leftMargin">
+       <number>8</number>
+      </property>
+      <property name="topMargin">
+       <number>6</number>
+      </property>
+      <property name="rightMargin">
+       <number>8</number>
+      </property>
+      <property name="bottomMargin">
+       <number>6</number>
+      </property>
+      <property name="spacing">
+       <number>8</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="mentor3TagLabel">
+        <property name="text">
+         <string>[ Наставник: ]</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor3NameLabel">
+        <property name="text">
+         <string>Имя</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor3Separator1">
+        <property name="text">
+         <string>|</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor3ThemeLabel">
+        <property name="text">
+         <string>Тема</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor3Separator2">
+        <property name="text">
+         <string>|</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor3ExperienceLabel">
+        <property name="text">
+         <string>Опыт</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="mentor3Separator3">
+        <property name="text">
+         <string>|</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="mentor3Spacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="mentor3RequestButton">
+        <property name="text">
+         <string>Отправить заявку</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="bottomSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="requestsButtonLayout">
+     <item>
+      <spacer name="requestsLeftSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="myRequestsButton">
+       <property name="text">
+        <string>Мои заявки</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="requestsRightSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
