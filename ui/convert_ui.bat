@@ -3,29 +3,12 @@ setlocal EnableExtensions
 chcp 65001 >nul
 title PySide 6 — конвертация .ui в .py
 
-rem ============================================================
-rem  convert_ui.bat
-rem  Массовая конвертация файлов Qt Designer .ui в модули .py
-rem  для PySide 6 при помощи pyside6-uic.
-rem
-rem  Способы запуска:
-rem    1. Двойной клик по скрипту — конвертирует все .ui файлы,
-rem       лежащие рядом со скриптом.
-rem    2. Перетащите на иконку скрипта папку с .ui файлами
-rem       или один .ui файл.
-rem    3. Из консоли:
-rem         convert_ui.bat [папка_или_файл.ui] [папка_для_py]
-rem
-rem  Результат: для каждого X.ui создаётся ui_X.py
-rem  Пример: из mainwindow.ui получается ui_mainwindow.py,
-rem          подключение: from ui_mainwindow import Ui_MainWindow
-rem ============================================================
 
 set "UI_DIR=%~dp0"
 set "OUT_DIR=%~dp0"
 set "MODE=folder"
 
-rem ---------- Разбор аргументов ----------
+rem
 if "%~1"=="" goto :args_done
 if exist "%~1\*" (
     set "UI_DIR=%~f1"
@@ -64,7 +47,7 @@ if not exist "%UI_DIR%" (
     exit /b 1
 )
 
-rem ---------- 1. Поиск Python ----------
+rem
 set "PYCMD="
 where py >nul 2>&1 && set "PYCMD=py -3"
 if not defined PYCMD (
@@ -79,12 +62,10 @@ if not defined PYCMD (
     exit /b 1
 )
 
-rem ---------- 2. Поиск pyside6-uic ----------
 call :find_uic
 
 if defined UIC goto :uic_found
 
-rem ---------- 3. PySide6 не найден — предлагаем установить ----------
 echo   [!] PySide6 не найден в системе.
 echo       Он необходим для конвертации .ui файлов.
 echo.
@@ -115,7 +96,6 @@ exit /b 1
 echo   Утилита конвертации: %UIC%
 echo.
 
-rem ---------- 4. Конвертация ----------
 if not exist "%OUT_DIR%" mkdir "%OUT_DIR%"
 
 set "PATTERN=%UI_DIR%\*.ui"
@@ -148,10 +128,8 @@ if %COUNT%==0 (
     exit /b 1
 )
 
-echo ------------------------------------------------------------
 echo   Готово!  Успешно: %OK%    С ошибками: %FAIL%
 echo   .py файлы сохранены в: %OUT_DIR%
-echo ------------------------------------------------------------
 echo.
 echo   Подключение в коде, например для mainwindow.ui:
 echo       from ui_mainwindow import Ui_MainWindow
